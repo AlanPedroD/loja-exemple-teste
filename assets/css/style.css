@@ -1,0 +1,202 @@
+/*! CSS Padrão */
+/* Fontes e escalas */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 1.6rem; /* 16px */
+  line-height: 1.5;
+  color: #222;
+  background-color: #fff;
+}
+
+/* Container padrão para largura fixa */
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 1.5rem; /* respiro lateral */
+}
+
+/* Tipografia escalonada (responsiva) */
+h1 { font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight: 700; }
+h2 { font-size: clamp(2rem, 4.5vw, 2.8rem); font-weight: 600; }
+h3 { font-size: clamp(1.8rem, 4vw, 2.4rem); font-weight: 600; }
+h4 { font-size: clamp(1.6rem, 3.5vw, 2rem); font-weight: 600; }
+h5 { font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 500; }
+h6 { font-size: clamp(1.2rem, 2.5vw, 1.6rem); font-weight: 500; }
+p  { font-size: clamp(1.6rem, 2vw, 1.6rem); font-weight: 400; }
+
+/* Links padrão */
+a:hover {
+  color: #e60023;
+  transition: color 0.3s ease;
+}
+
+/* Botões padrão */
+button {
+  cursor: pointer;
+  background-color: #e60023;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background-color: #b8001b;
+}
+
+
+/*! Header */
+header { 
+  background:#fff; 
+  border-bottom:1px solid #ddd; 
+  position:sticky; 
+  top:0; 
+  z-index:1000; 
+}
+
+.header-content { 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  min-height:60px; 
+}
+
+
+.logo a { 
+  color:#111;  
+  font-weight:bold; 
+}
+
+/* Nav-Cart */
+.nav-cart { 
+  display:flex; 
+  align-items:center; 
+  gap:20px; 
+}
+
+/* Menu */
+.menu ul { 
+  display:flex; 
+  gap:24px; 
+}
+
+.menu a { 
+  color:#333; 
+  font-weight:500; 
+  transition:0.3s; 
+}
+.menu a:hover { 
+  color:#e60023; 
+}
+
+/* Carrinho */
+.cart-wrapper { position:relative; display:inline-flex; justify-content:center; align-items:center; }
+.cart-wrapper i { font-size:22px; }
+.cart-count {
+  position:absolute;
+  top:0;
+  right:0;
+  transform:translate(50%, -50%);
+  display:flex; justify-content:center; align-items:center;
+  width:16px; height:16px; font-size:10px;
+  color:#fff; background:#e60023; border-radius:50%;
+}
+
+/* Hambúrguer */
+.menu-toggle {
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  cursor:pointer;
+  width:30px;
+  height:25px;
+  position:relative;  /* importante */
+  z-index:1001;       /* acima do menu */
+}
+.menu-toggle span {
+  height:3px; width:100%; background:#333; margin:4px 0; border-radius:2px; transition:0.4s;
+}
+
+
+/*! Seção Hero */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1; /* overlay fica acima da imagem */
+}
+
+.hero picture,
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 0; /* imagem fica atrás */
+}
+
+.hero-content {
+  position: absolute;
+  max-width: 800px;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: clamp(1rem, 4vw, 3rem);
+  background: rgba(0, 0, 0, 0.4); /* fundo preto semitransparente */
+  border-radius: 0.5rem;           /* cantos arredondados, opcional */
+  z-index: 2; /* conteúdo fica acima do overlay */
+}
+
+.hero-content h1 {
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.btn-container{
+  display: flex;
+  justify-content: center;
+}
+.hero-content .btn {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 1rem 1.4rem; 
+  background: #2F2E2E; color: #fff;
+  font-size: clamp(1.2rem, 1.5vw, 1.7rem); 
+  border-radius: 5px; 
+  text-decoration: none; 
+  transition: background 0.3s;
+  text-transform: uppercase;
+  width: auto;
+  margin-bottom: 1.6rem;
+  font-family: "Raleway", sans-serif; 
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+.hero-content .btn:hover{
+  background-color: #f5f5f5;
+  color: #000;
+}

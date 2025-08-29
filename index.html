@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Loja de roupas moderna com novidades, masculino, feminino e muito mais.">
+  <title>Look Modas</title>
+  <!-- Font Awesome para ícone do carrinho -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <!-- Reset css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Responsive css -->
+  <link rel="stylesheet" href="assets/css/responsive.css"> 
+
+</head>
+<body>
+
+<header>
+  <div class="container header-content">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="index.html">Look Modas</a>
+    </div>
+
+    <!-- Nav e Carrinho -->
+    <div class="nav-cart">
+      <!-- Menu -->
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="/novidades">Novidades</a></li>
+          <li><a href="/masculino">Masculino</a></li>
+          <li><a href="/feminino">Feminino</a></li>
+          <li><a href="/contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Carrinho -->
+      <div class="cart">
+        <a href="/carrinho" aria-label="Carrinho de compras">
+          <span class="cart-wrapper">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">3</span>
+          </span>
+        </a>
+      </div>
+
+      <!-- Hambúrguer -->
+      <div class="menu-toggle" aria-label="Abrir menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+  <section class="hero">
+    <picture>
+      <!-- Imagem para telas pequenas -->
+      <source media="(max-width: 768px)" srcset="assets/imagens/hero-teste.jpg">
+      <!-- Imagem para telas grandes -->
+      <source media="(min-width: 769px)" srcset="assets/imagens/hero-1.png">
+      <!-- Fallback -->
+      <img src="assets/imagens/hero-1.png" alt="Moda que combina com você" loading="eager">
+    </picture>
+
+    <div class="hero-content">
+      <h1>Moda que combina com você</h1>
+      <p>As melhores roupas com preços incríveis</p>
+      <div class="btn-container"><a href="#produtos" class="btn scroll-link">Ver Modelos</a></div>
+    </div>
+  </section>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>

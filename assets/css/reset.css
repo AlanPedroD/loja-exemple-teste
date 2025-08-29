@@ -1,0 +1,52 @@
+/* Reset básico inspirado no Normalize.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* facilita cálculo de largura/altura */
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.15; /* mantém leitura */
+  -webkit-text-size-adjust: 100%; /* evita zoom automático em iOS */
+  scroll-behavior: smooth; /* rolagem suave */
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
