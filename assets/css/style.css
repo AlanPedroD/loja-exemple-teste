@@ -202,6 +202,11 @@ header {
 }
 
 /*! SEÇÃO PRODUTOS */
+.produtos h2{
+  text-align: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
 .container-produtos {
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 4 colunas iguais */
