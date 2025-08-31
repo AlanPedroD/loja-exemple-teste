@@ -208,7 +208,7 @@ header {
   gap: 10px; /* espaçamento entre os cards */
   max-width: 1200px; /* largura máxima opcional */
   margin: 0 auto; /* centralizar o container */
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .card-produto {
